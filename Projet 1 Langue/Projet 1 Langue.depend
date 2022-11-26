@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1669471433 source:c:\users\youss\desktop\projet c\quelle-langue\projet 1 langue\main.cpp
+1669488048 source:c:\users\youss\desktop\projet c\quelle-langue\projet 1 langue\main.cpp
 	<stdio.h>
 	<stdlib.h>
+	<iostream>
 
-1669471446 source:c:\users\youss\desktop\projet c\quelle-langue\projet 1 langue\test youssef.c
+1669487216 source:c:\users\youss\desktop\projet c\quelle-langue\projet 1 langue\test youssef.c
 	<stdio.h>
 	<stdlib.h>
 

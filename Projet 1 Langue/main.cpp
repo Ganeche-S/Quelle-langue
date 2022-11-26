@@ -52,8 +52,55 @@ void Occurrences_Lettres() {
 
     //Tant que la lecture du fichier n'est pas terminé, on regarde la lettre courante et on incremente le nombre d'occurences si il y a une correspondance
             do{
+
                 caract = fgetc(fic);
+
+                //////////////////////////////////////////////
+
+                if(!(caract >= 48 && caract <= 57)){
+                    if ((caract >= 131 && caract <= 134) || (caract >= 142 && caract <= 143) || caract==160 || (caract >= 181 && caract <= 183) || (caract >= 198 && caract <= 199) || (caract >= -125 && caract <= -122) || (caract >= -114 && caract <= -113) || caract==-96 || (caract >= -75 && caract <= -73) || (caract >= -58 && caract <= -57)){
+                        caract=97;
+                    }
+
+                    else if(caract==128 || caract==135 || caract==-121){
+                        caract=99;
+                    }
+
+                    else if(caract == 209 || caract==-47){
+                        caract=100;
+                    }
+
+                    else if(caract==130 || (caract >= 136 && caract <= 138) || caract==144 || (caract >= 210 && caract <= 212) || caract==-126 || (caract >= -120 && caract <= -118) || caract==-112 ||(caract >= -46 && caract <= -44)){
+                        caract=101;
+                    }
+
+                    else if((caract >= 139 && caract <= 141) || caract==161 || caract==173 || (caract >= 214 && caract <= 216) || caract==222 || (caract >= -117 && caract <= -115) || caract==-95 || (caract >= -42 && caract <= -34)){
+                        caract=105;
+                    }
+
+                    else if((caract >= 164 && caract <= 165) || (caract >= -92 && caract <= -91)){
+                        caract=110;
+                    }
+
+                    else if((caract >= 147 && caract <= 149) || caract==153 || caract==162 || caract==208 || caract==224 || (caract >= 226 && caract <= 229) || (caract >= -109 && caract <= -107) || caract==-103 || caract==-94 || (caract >= -32 && caract <= -27)){
+                        caract=111;
+                    }
+
+                    else if(caract==129 || (caract >= 150 && caract <= 151) || caract==154 || caract==163 || (caract >= 233 && caract <= 235) || caract==-127 || (caract >= -106 && caract <= -105) || caract==-102 || caract==-93 || (caract >= -23 && caract <= -21)){
+                        caract=117;
+                    }
+
+                    else if(caract==152 || (caract >= 236 && caract <= 237) || caract==-104 || (caract >= -20 && caract <= -19)){
+                        caract=121;
+                    }
+                }else if(caract>=65 && caract<=90){
+                    caract = caract+32;
+                }
+
+                //////////////////////////////////////////////////
+
                 occ = static_cast<char>(caract);
+
                 if (occ == 'a') {
                     nbOccA = nbOccA + 1;
                 }
@@ -209,7 +256,7 @@ void Occurrences_Lettres() {
 int main()
 {
 
-    Francais();
+    //Francais();
     Occurrences_Lettres();
 
     return 0;
