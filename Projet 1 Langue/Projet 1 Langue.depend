@@ -1,12 +1,13 @@
 # depslib dependency file v1.0
-1669488048 source:c:\users\youss\desktop\projet c\quelle-langue\projet 1 langue\main.cpp
+1669565451 source:c:\users\youss\desktop\projet c\quelle-langue\projet 1 langue\main.cpp
 	<stdio.h>
 	<stdlib.h>
 	<iostream>
+	<cmath>
+	<iomanip>
 
-1669487216 source:c:\users\youss\desktop\projet c\quelle-langue\projet 1 langue\test youssef.c
-	<stdio.h>
-	<stdlib.h>
+1669562991 source:c:\users\youss\desktop\projet c\quelle-langue\projet 1 langue\test youssef.c
+	<iostream>
 
 1669485110 source:c:\users\sivas\desktop\info\eicnam\c\quelle-langue\projet 1 langue\main.cpp
 	<stdio.h>

@@ -1,0 +1,487 @@
+Projet C++
+À rendre
+Date limite : Dimanche 25 Décembre 2022 à 
+23H59
+Plages d'ouverture pour envoyer votre projet par mail
+Début : Lundi 21 Décembre à 08H00
+Fin : Dimanche 25 Décembre à 23H59
+Ne vous y prenez pas au dernier moment !!!
+Vous ne devez rendre votre projet que s'il fonctionne
+parfaitement sur PC et répond complètement à l'énoncé.
+Pour réaliser votre projet C++, vous disposez de deux fichiers:
+• Énoncé Projet C++ FIP1 Décembre 2022.docx (énoncé pdf)
+• FIP1_Projet C++_NOM1_NOM2_Décembre_2022.docx (fichier 
+Word à rendre)
+Fichier à rendre
+Après l'avoir téléchargé, vous devrez le renommer, compléter et l'envoyer
+par mail (Objet du mail : Projet C++ FIP1 Décembre 2022).
+Nom du fichier Word initial à rendre et à télécharger : 
+FIP1_Projet C++_NOM1_NOM2_Décembre_2022.docx
+Nom de votre fichier Word à rendre : 
+Si le binôme est constitué de Marine CALDERI et Sara GIMENEZ : 
+FIP1_Projet C++_CALDERI_GIMENEZ_Décembre_2022.docx
+Attention !!
+• Le projet doit être écrit en langage C++
+• Aucun projet ne sera accepté, passé la date limite
+• Tout projet incomplet ou ne fonctionnant pas ne sera pas pris en compte
+• Une partie de votre travail consistera à bien tester si votre projet fonctionne 
+dans des cas de figures différents.
+• Vous aurez eu un mois pour réaliser ce projet.
+• Réaliser d'autres choses que ce qui est demandé ne rapporte aucun point 
+supplémentaire.
+• Tout projet incomplet, ne fonctionnant pas ou ne répondant pas aux demandes 
+précises de l'énoncé ne sera pas évalué.
+• L'absence de vidéo ou des 6 captures d'écran (voir fichier à rendre) montrant, 
+selon vous, le bon fonctionnement du programme entraînera la non-évaluation 
+du projet.
+• La vidéo doit montrer que le projet fonctionne dans des cas de figure différents.
+• Votre projet doit être unique et ne doit pas être un code source trouvé dans un 
+livre ou sur un site Web,
+• En rendant votre projet vous vous engagez à avoir réalisé votre projet seul(e), 
+sans aide humaine.
+• Le logiciel anti-plagiat intégré à Moodle sera utilisé pour vérifier les 
+ressemblances avec des sites Web et/ou entre les projets rendus,
+• En cas de besoin d'explications nécessaires pour bien évaluer votre travail, 
+vous pourrez être contacté(e) pour convenir ensemble d'un créneau 
+téléphonique ou vidéo pour expliquer votre projet : vous devrez savoir répondre 
+individuellement aux questions élémentaires concernant directement et 
+uniquement le code source de votre projet.
+Le projet
+Préambule
+En partant du principe que vous savez désormais programmer en C++, il vous est 
+proposé ici des projets différents que vous n'avez jamais abordé en cours, à vous de 
+choisir celui qui vous convient le mieux.
+Vous devez choisir un seul projet parmi les 5 proposés ciaprès.
+• Le code doit être le plus simple et le plus court possible.
+• Les différentes tâches à exécuter doivent être écrites avec des 
+fonctions/méthodes qu'utilisera le programme principal.
+• On doit pouvoir copier/coller cet ensemble de code source, l'insérer 
+dans Codeblocks et pouvoir le compiler et qu'il marche sur PC
+sans aucune autre manipulation que ce copier/coller,
+• Il n'y aura pas de corrigé des projets,
+• Le barème, non contractuel, comporte au moins 10 points pour :
+o Respect des consignes, de la clarté du document, 
+o Qualité de la vidéo explicative,
+o Simplicité du code source, 
+o Bonne écriture des différentes fonctions/méthodes, 
+o Qualité des explications techniques (intérêt, simplicité…)
+o Rédaction globale (fluidité, simplicité, fautes d'orthographe…) 
+Projet 1
+Quelle langue (/lettres) ?
+Vous ne devez utiliser aucune librairie autre que celles pour gérer l’affichage 
+courant et les entrées/sorties et maths.h et string.h.
+L'objectif est de trouver la langue d'un texte choisi.
+Vous devez créer cinq fichiers texte (fichier .txt) avec dedans, un texte dans l'une des 
+cinq langues suivantes : français, italien, allemand, anglais ou espagnol + un autre 
+texte qui sera le texte dont on veut trouver la langue. (Utilisez des textes longs, de 
+plusieurs milliers de mots, et actuels comme des articles de presse).
+On va ici travailler sur les occurrences de lettres (nombre de lettres) dans des textes.
+Exemple de tableau d'occurrences et fréquences d'un texte :
+Contraintes
+Vous devrez avoir entièrement programmé vous-même les algorithmes qui trouvent la
+langue utilisée.
+Vous programmerez de façon modulaire (fonctions et méthodes)
+L'algorithme doit fonctionner sur un texte de 50 mots comme 2 000 mots.
+Aucune interface d'affichage/saisie n'est à programmer.
+Vous devrez créer une fonction/méthode Trouve_Langue qui retourne la langue du 
+texte.
+Le programme gèrera les majuscules, les minuscules mais aussi les accents, les 
+cédilles, les trémas et les lettres comme suit : 
+• A, Â, À, Ä, â, à, ä, seront considérés comme des "a"
+• É, È, Ê, Ë, é, è, ê, ë, seront considérés comme des "e"
+• Ï, Î, ï, î, seront considérés comme des "i"
+• Ô, ô, seront considérés comme des "o"
+• Û, Ù, û, ù, seront considérés comme des "u"
+• Ç, ç, seront considérés comme des "c"
+Analyse des fréquences
+Vous écrirez une fonction/méthode nommée Occurrences_Lettres qui calculera le 
+nombre d'occurrences de chaque lettre de l'alphabet pour ce texte. La fonction écrira 
+ensuite, à la fin du fichier texte, les lettres de l'alphabet et, à côté, les occurrences de 
+chacune des lettres comme, par exemple, ci-dessous : 
+Occurrences du texte à analyser : A : 13 ; B : 12 ; C : 46 ; D : 9 ; ………Z : 0
+Tableau d'occurrences : [13 ;12 ; 46 ; 9 ;….0]
+Dans un second temps, vous utiliserez cette fonction/méthode pour générer une liste 
+(tableau) des 26 occurrences des lettres de l'alphabet pour chacune des cinq langues. 
+Ces cinq tableaux serviront au programme principal.
+Calcul de la différence euclidienne
+Vous programmerez la fonction Calcule_écart qui va calculer l'écart (nombre à deux 
+décimales) entre les valeurs d'un texte à analyser et les valeurs d'un texte de référence
+dans une langue donnée.
+Ici, T sera le tableau avec les 26 occurrences de notre texte à analyser,
+T_anglais sera, par exemple, le tableau avec les 26 occurrences pour la langue 
+anglaise.
+La fonction Calcule_écart retournera :
+Ecart =
+√∑ ((T(i)/somme(éléments de T) – T_anglais(i)/ somme(éléments de T_anglais) )
+𝟐𝟓 𝟐
+𝟎
+Cet écart sera calculé pour les cinq langues.
+La langue du texte à analyser sera celle qui obtient le plus faible écart.
+Programme
+Le programme comportera, en dur, les tableaux avec les 26 occurrences de lettres
+pour chacune des 5 langues.
+Le programme demandera si l'on souhaite générer :
+• Les occurrences des lettres d'un texte (on appellera Occurrences_Lettres ) 
+• Trouver la langue d'un texte (on appellera Trouve_Langue).
+Puis, le programme doit demander le chemin d'accès puis le nom du fichier texte à 
+analyser et de son extension.
+Si l'on recherche les occurrences des lettres d'un texte :
+Le programme écrira à la fin du fichier texte, par exemple : 
+Occurrences du texte à analyser : A : 13 ; B : 12 ; C : 46 ; D : 9 ; …………
+Tableau d'occurrences : [13 ;12 ; 46 ; 9 ;…. 0]
+Si l'on recherche la langue du texte :
+Le programme écrira à la fin du fichier texte : 
+Langue trouvée : xxx où xxx est la langue du fichier texte situé dessus.
+Puis, le programme écrira dessous, dans le fichier texte :
+Français ; écart : …
+Anglais ; écart : …
+Italien ; écart : …
+Allemand ; écart : …
+Espagnol ; écart : …
+Le programme écrira enfin, dessous, les occurrences des différentes lettres du texte 
+à analyser comme suit, par exemple : 
+Occurrences du texte à analyser : A : 13 ; B : 12 ; C : 46 ; D : 9 ; ……Z : 0
+Et également sous la forme d'un tableau : [13 ;12 ; 46 ; 9 ;…. 0]
+Exemple d'affichage généré sous le texte dont on veut trouver la langue :
+Langue trouvée : Italien
+Français ; écart : 0,13
+Anglais ; écart : 0,18
+Italien ; écart : 0,08
+Allemand ; écart : 0,20
+Espagnol ; écart : 0,11
+Occurrences du texte à analyser : A : 13 ; B : 12 ; C : 46 ; D : 9 ; …………
+Tableau d'occurrences : [13 ;12 ; 46 ; 9 ;…. 0]
+Dans les deux cas, le programme affichera à la fin, de façon lisible et en mode console, 
+le fichier texte et toutes les informations contenues et écrites dedans.
+Projet 2
+Quelle langue (/mots) ?
+Vous ne devez utiliser aucune librairie autre que celles pour gérer l’affichage 
+courant et les entrées/sorties et maths.h et string.h.
+L'objectif est de trouver la langue d'un texte choisi.
+Vous devez créer cinq fichiers texte (fichier .txt) avec dedans, un texte dans l'une des 
+cinq langues suivantes : français, italien, allemand, anglais ou espagnol + un autre 
+texte qui sera le texte dont on veut trouver la langue. (Utilisez des textes longs, de 
+plusieurs milliers de mots, et actuels comme des articles de presse).
+Contraintes
+Vous devrez avoir entièrement programmé vous-même les algorithmes qui trouvent la
+langue utilisée.
+Vous programmerez de façon modulaire (fonctions et méthodes)
+L'algorithme doit fonctionner sur un texte de 10 mots comme 2 000 mots.
+Aucune interface d'affichage/saisie n'est à programmer.
+Vous devrez créer une fonction/méthode Trouve_Langue qui retourne la langue du 
+texte.
+Le programme gèrera les majuscules, les minuscules mais aussi les accents, les 
+cédilles, les trémas et les lettres comme suit : 
+• A, Â, À, Ä, â, à, ä, seront considérés comme des "a"
+• É, È, Ê, Ë, é, è, ê, ë, seront considérés comme des "e"
+• Ï, Î, ï, î, seront considérés comme des "i"
+• Ô, ô, seront considérés comme des "o"
+• Û, Ù, û, ù, seront considérés comme des "u"
+• Ç, ç, seront considérés comme des "c"
+Conseils
+Il existe des caractéristiques linguistiques pour chaque langue. 
+Renseignez-vous sur le Web et réalisez une recherche bibliographique mais votre 
+algorithme peut aussi les calculer pour des textes de référence 
+Votre algorithme doit s'appuyer sur deux critères parmi les suivants :
+• On pourra travailler sur les occurrences de mots (mots les plus utilisés),
+• On pourra travailler sur les occurrences de deux mots successifs,
+• On pourra travailler sur les occurrences de trois mots successifs,
+• On pourra travailler sur les occurrences de deux lettres successives (doublets),
+Dans ce projet, vous n'avez pas le droit d'utiliser les occurrences de lettres (lettres les 
+plus utilisées).
+Le programme affichera à la fin, de façon lisible et en mode console, le fichier texte et 
+toutes les informations contenues et écrites dedans.
+Quelques indications
+En français, les mots de 2 lettres les plus fréquents sont (dans l’ordre) : 
+de, il, le, et, je, la, ne, un, en, ce, se, sa, du.
+En français, les mots de 3 lettres les plus fréquents sont (dans l’ordre) : 
+que, les, son, mon, pas, lui, une, des, qui, est.
+En français, les doublets les plus fréquents sont : 
+ss, ll, mm, rr, tt, nn, pp, ee, cc et ff.
+Il faudra peut-être calculer le nombre de lettres et de mots puis les balayer et stocker 
+dans une structure de votre choix (fichier texte, liste, tableau).
+Attention à la différence entre le mot "un" et la chaîne de caractères "un" que l'on peut 
+trouver dans le mot "chacun" par exemple et ainsi de suite. 
+Projet 3
+Analyse Linguistique
+Vous ne devez utiliser aucune librairie autre que celles pour gérer l’affichage 
+courant et les entrées/sorties et maths.h et string.h.
+L'objectif est de calculer des paramètres linguistiques à partir d'un texte.
+Vous devez créer un fichier texte avec dedans, un texte en français. (Utilisez des textes 
+longs, de plusieurs milliers de mots, et actuels comme des articles de presse).
+A l'exécution, le programme doit demander le chemin d'accès puis le nom du fichier 
+texte et de son extension.
+A l'exécution, le programme écrira à la fin du fichier texte : 
+• Nombre de lettres : xxx (il faudra gérer la ponctuation, espaces et nombres 
+éventuels)
+• Nombre de voyelles : xxx (il faudra gérer les accents, majuscules, cédilles…)
+• Nombre de mots : xxx (il faudra gérer la ponctuation, espaces et nombres 
+éventuels)
+• Liste des 20 lettres les plus utilisées et le nombre de fois xxx où elles 
+apparaissent 
+Exemple : 
+Lettre E : 45
+Lettre S : 40
+Lettre A : 34
+…
+• Liste des 20 mots les plus utilisés et le nombre de fois xxx où ils apparaissent 
+(Un mot et sa fréquence et on passe à la ligne)
+• Liste des 20 doublets de mots (deux mots se succédant) les plus utilisés et le 
+nombre de fois xxx où ils apparaissent (les deux mots se succédant et leur 
+fréquence puis on passe à la ligne et ainsi de suite).
+Les valeurs xxx seront calculées par votre programme et écrites dans le fichier 
+texte.
+Contraintes
+Vous devrez avoir entièrement programmé vous-même les algorithmes qui calculent 
+les différents paramètres linguistiques.
+Vous programmerez de façon modulaire (fonctions et méthodes)
+L'algorithme doit fonctionner sur un texte de 50 mots comme pour 2000 mots. 
+Aucune interface d'affichage/saisie n'est à programmer.
+Conseils
+Il faudra vraisemblablement calculer le nombre de lettres et de mots puis les balayer 
+et les stocker dans une structure de votre choix (fichier texte, liste, tableau) puis 
+analyser enfin ces données (tris).
+Projet 4
+Analyse de consommations électriques
+Vous ne devez utiliser aucune librairie autre que celles pour gérer l’affichage 
+courant.
+Vous récupérerez les données détaillées de consommations d'électricité sur une 
+période récente d'une semaine (ou un mois) à partir d'un compteur électrique Linky. 
+Linky peut donner :
+• La consommation journalière en kiloWatt.heure (kWh),
+• La puissance moyenne utilisée par tranche d'une demi-heure, en Watt (W),
+• La puissance la plus élevée qui a été nécessaire à un instant de la journée pour 
+faire fonctionner vos appareils électriques, en Watt (W).
+Pour rappels :
+Puissance = Consommation / Temps
+Puissance en Watt (W), Consommation en Watt.heure (Wh), Temps en heures (h)
+Une consommation de 3 kWh signifie que vous avez eu besoin d'une puissance de 
+3000 W pendant une heure.
+Un radiateur de 2000 W (puissance) signifie que ce radiateur consommera 2 kWh 
+(2000 Wh) s'il fonctionne durant une heure.
+Vous reformaterez éventuellement ces données dans un fichier texte à partir des 
+données initiales qui seront vraisemblablement exportées au format .csv (fichier 
+brut Excel). Vous pourrez transformer ces données de départ si vous le souhaitez et 
+les écrire à la suite de ce fichier texte mais vous devrez bien décrire la nature de toutes 
+vos données et ce que vous réalisez. 
+Aucune programmation n'est nécessaire pour ces étapes préliminaires.
+Il faudra comprendre la signification des données exportées.
+Par exemple, il serait intéressant d'arriver au minimum à des données du type : 
+Jour/ Heure (par tranche d'une demi-heure) / Consommation moyenne électrique 
+(kWh)
+Il vous est conseillé de noter (pour vous) sur un papier vos activités pendant un 
+jour ou deux afin de pouvoir observer et interpréter l'incidence de celles-ci sur 
+les données collectées (réveil, couché, période de logement vide, ballon d'eau 
+chaude (vaisselle, douche), cuisine sur plaque de cuisson, chauffage électrique 
+éventuel, sèche-linge, repassage…)
+Vous devrez écrire deux fonctions parmi les quatre proposées ci-dessous. Si vous 
+avez choisi Heure_Premier_levé() vous ne pouvez pas choisir 
+Heure_Dernier_couché().
+Votre algorithme devra s'appuyer sur plusieurs critères.
+• Heure_Premier_levé() (écrira dans un fichier texte "Résultat", les 
+heures où s'est levée la première personne, pour les différents jours)
+Format d'affichage (exemple)
+Heure premier levé 
+1/09/2020 : 06H50 
+2/09/2020 : 07H10 
+3/09/2020 : 08H40
+• Heure_Dernier_couché (écrira dans un fichier texte "Résultat", les 
+heures où s'est couchée la dernière personne, pour les différents jours)
+Format d'affichage (exemple)
+Heure dernier couché :
+1/09/2020 : 22H50 
+2/09/2020 : 23H30 
+3/09/2020 : 23H00
+• Jours_Absence (écrira dans un fichier texte "Résultat", le nombre de 
+jours et le détail des jours où il n'y aura eu personne dans l'appartement ou la 
+maison)
+Format d'affichage (exemple)
+Jours d'absence : 3 
+Détail des jours : 
+12/09/2020 
+17/09/2020 
+28/09/2020
+• Absence_Midi (écrira dans le fichier texte "Résultat", le nombre de jours 
+et le détail des jours où il n'y aura eu personne dans l'appartement ou la maison
+entre 12H30 et 14H00)
+Format d'affichage (exemple)
+Absence le midi : 4 
+Détail des jours 
+10/09/2020 
+11/09/2020 
+12/09/2020 
+13/09/2020
+Le code source doit être le plus simple et le plus court possible.
+Ressources :
+https://www.compteurlinky.com/pratique/consommation_jour_le_jour_compteur_linky/
+https://www.enedis.fr/comprendre-mes-donnees
+Projet 5
+Analyse d'activité physique 
+Vous ne devez utiliser aucune librairie autre que celles pour gérer l’affichage 
+courant.
+Vous récupérerez les données détaillées d'activité cardiaque et de nombre de pas 
+réalisés au cours d'une journée complète, à partir d'une montre connectée (on 
+démarrera à 00H00 et terminera le surlendemain à 02H00 du matin en vérifiant que la 
+personne ne s'est pas couchée après deux heures du matin et a bien porté sa montre, 
+en journée et durant la nuit). Vous pouvez récupérer les données sur une semaine 
+complète si vous le souhaitez. 
+Il vous est conseillé de noter (pour vous) sur un papier vos activités pendant un 
+jour ou deux afin de pouvoir observer et interpréter l'incidence de celles-ci sur 
+les données collectées.
+Une montre connectée peut enregistrer :
+• Le nombre de battements cardiaques par minute (pouls) à un instant donné,
+• Le nombre de pas effectués à intervalles de temps réguliers.
+Vous reformaterez éventuellement ces données dans un fichier texte à partir des 
+données initiales qui seront vraisemblablement exportées au format .csv (fichier 
+brut Excel). Vous pourrez transformer ces données de départ si vous le souhaitez et 
+les écrire à la suite de ce fichier texte mais vous devrez bien décrire la nature de toutes 
+vos données et ce que vous réalisez. 
+Aucune programmation n'est nécessaire pour ces étapes préliminaires.
+Il faudra comprendre la signification des données exportées.
+Par exemple, il serait intéressant d'arriver au minimum à des données du type : Jour/ 
+Heure (avec les minutes) / Nombre total de pas pour l'activité physique 
+Jour/ Heure (avec les minutes) / Pouls pour l'activité cardiaque
+Exemple de données brutes d'activité cardiaque
+à 14H05 : 83 battements par minute
+Exemple de nombre de pas : entre 16:41 et 17H36 : 102 pas
+Entre 17H39 et 18H20 : 0 pas (valeur 255)
+Vous devrez écrire deux fonctions parmi les quatre proposées ci-dessous. Si vous 
+avez choisi Heure_Réveil() vous ne pouvez pas choisir Heure_Couché().
+Votre algorithme devra s'appuyer sur plusieurs critères.
+• Heure_Levé () (écrira dans un fichier texte "Résultat", l'heure où s'est 
+levée la personne, en fin de nuit). A ne pas confondre avec une levée dans la 
+nuit.
+Format d'affichage (exemple)
+Heure de réveil 
+1/09/2020 : 06H50 
+2/09/2020 : 07H10 
+3/09/2020 : 08H40
+• Heure_Couché () (écrira dans un fichier texte "Résultat", l'heure où s'est 
+couchée la personne)
+Format d'affichage (exemple)
+Heure de couché 
+1/09/2020 : 22H50 
+2/09/2020 : 23H10 
+3/09/2020 : 23H40
+• Levée_Durant_Nuit ()(écrira dans un fichier texte "Résultat", le nombre 
+de levée(s) durant la nuit et les heure(s) éventuelle(s) de levée(s) ; à ne pas 
+confondre avec l'heure de réveil.
+Format d'affichage (exemple)
+Nombre de levée(s) durant la nuit : 2
+03H10
+05H30
+• Activité_Physique () écrira dans le fichier texte "Résultat", le nombre 
+de périodes d'activité physique entre 08H00 et 23H00 : on supposera qu'il y a 
+activité physique quand les battements cardiaques dépassent 90 pendant plus 
+d'une minute.
+Format d'affichage (exemple)
+Activités physiques : 3
+13H10 : 10 minutes
+17H30 : 60 minutes
+22H30 : 30 minutes
+Assis en terrasse dans le quartier touristique du Vieux Lyon, James sirote une limonade bien fraîche. Avec la chaleur estivale, cette journée d’exploration se révèle très fatigante !
+
+Ce matin, James s’est levé tôt, a loué un vélo et a parcouru les rues de Lyon. Il a longé les quais de la Saône, traversé la presqu’île, puis rejoint les quais du Rhône. En chemin, il a pu admirer la magnifique fontaine Bartholdi sur la grande Place des Terreaux. Il s’est également arrêté dans une boulangerie où il a longuement hésité entre un pain au chocolat, un croissant, et une brioche aux pralines, pâtisserie typiquement lyonnaise. Il a finalement opté pour cette dernière.
+
+James a ensuite rejoint le quartier moderne de la Confluence où le fleuve de la Saône se jette dans le Rhône.
+
+Il s’apprête maintenant à prendre le funiculaire qui l’emmènera au sommet de la colline de Fourvière. Là, il pourra visiter la fameuse basilique Notre Dame de Fourvière et contempler la splendide vue panoramique sur la ville de Lyon depuis le belvédère. En redescendant à pied, il s’arrêtera pour visiter le plus ancien théâtre gallo-romain de France, puis ira dîner dans un bouchon lyonnais, restaurant typique de la ville.Ah, le mois de décembre : ses illuminations, la couronne de l’Avent pour les catholiques, et le fameux calendrier empli de chocolat pour les enfants... Tous ces préparatifs rendent chaque année l’atmosphère festive et enjouée. Il n’y a qu’à observer la métamorphose des rues commerçantes pour en être convaincu. Finies les façades grises et ternes, terminée la morosité ambiante : les rues se parent de guirlandes scintillantes et les vitrines rivalisent d’imagination pour leur décoration.
+
+Les passants semblent moins pressés, et s’attardent plus facilement devant une devanture ou dans les rayons. Les dernières semaines avant Noël se déroulent dans une ambiance joyeuse et féérique.
+
+Le 24 décembre est le jour du réveillon. C’est l’occasion de fêter Noël en famille, en petit comité. Un sapin fraîchement coupé est installé dans la cuisine ou le salon, et décoré à l’aide de guirlandes colorées et de boules de noël. Les cadeaux seront déposés à son pied, le soir du 24 ou le 25 décembre au matin.
+
+Le repas est servi sur une table resplendissante, recouverte de bougies et de petits santons.
+
+Le lendemain, le 25 décembre, est le jour de Noël. C’est un jour de fête où l’on invite la famille plus éloignée à partager le repas de midi. C’est souvent un repas fastueux et long : il n’est pas rare de sortir de table vers 16 ou 17heures !
+Ah, le mois de décembre : ses illuminations, la couronne de l’Avent pour les catholiques, et le fameux calendrier empli de chocolat pour les enfants... Tous ces préparatifs rendent chaque année l’atmosphère festive et enjouée. Il n’y a qu’à observer la métamorphose des rues commerçantes pour en être convaincu. Finies les façades grises et ternes, terminée la morosité ambiante : les rues se parent de guirlandes scintillantes et les vitrines rivalisent d’imagination pour leur décoration.
+
+Les passants semblent moins pressés, et s’attardent plus facilement devant une devanture ou dans les rayons. Les dernières semaines avant Noël se déroulent dans une ambiance joyeuse et féérique.
+
+Le 24 décembre est le jour du réveillon. C’est l’occasion de fêter Noël en famille, en petit comité. Un sapin fraîchement coupé est installé dans la cuisine ou le salon, et décoré à l’aide de guirlandes colorées et de boules de noël. Les cadeaux seront déposés à son pied, le soir du 24 ou le 25 décembre au matin.
+
+Le repas est servi sur une table resplendissante, recouverte de bougies et de petits santons.
+
+Le lendemain, le 25 décembre, est le jour de Noël. C’est un jour de fête où l’on invite la famille plus éloignée à partager le repas de midi. C’est souvent un repas fastueux et long : il n’est pas rare de sortir de table vers 16 ou 17heures !
+« L’espace » dans lequel le lecteur se trouve enveloppé au cours de la lecture d’un texte littéraire ressemble, quelque part, à l’espace qui apparaît dans un rêve.
+L’interrupteur de la conscience qui relie le lecteur à la réalité environnante est coupé quand celui-ci s’immerge dans le monde de l’œuvre. Si la plongée dans un tel état consiste en la lecture idéale, on peut y voir une subtile analogie avec le monde onirique où s’estompent les contours de la conscience quotidienne. À l’inverse, quand on referme un livre après avoir lu la dernière page, on ressent le vague embarras d’être tiré hors d’un rêve. « L’espace » du texte arpenté par le lecteur, tout comme l’espace du rêve, se rétracte et s’élargit partiellement ; espace contraignant où sont enfermés le corps et l’esprit du lecteur, mais qui l’instant suivant devient un espace ouvert qui promet un libre envol. S’il s’agit assurément d’un « espace » de vide, d’un « espace » absurde, très éloigné de l’espace transparent de l’expérience dans le monde de tous les jours, néanmoins, tant que le regard poursuit sa course le long du texte, cet espace de vide est animé d’une vie continue grâce au travail de l’imagination. L’étendue de « l’espace » vide créée par le texte indique, en même temps, les limites de l’étendue de l’imagination du lecteur. Mais au cours du processus réel de lecture, dans cet espace de vide même, il semblerait que l’on rejette plutôt de nombreuses choses à la périphérie du champ de vision intérieur. Au centre de ce champ, ce que le lecteur regarde ce sont en général les actions et la psychologie des personnages, ainsi que le développement de l’intrigue…
+Depuis la fin du xxe siècle, la mondialisation et les phénomènes connexes tels que le time-space compression (Harvey 1989), la transmigration et le cyberespace ont profondément marqué notre vie quotidienne et le discours social. Les mouvements d’individus, de peuples, d’idées, d’objets et de capital à travers les frontières géographiques, linguistiques et nationales ont amené les chercheurs issus de disciplines diverses à repenser l’espace dans l’ère postmoderne, hypermoderne, surmoderne ou encore postcoloniale. La formation de nouvelles réalités spatiales a suscité une prolifération de notions théoriques incluant l’hétérotopie (Foucault 1984), le space of flows (Castells 1989), les non-lieux (Augé 1992), le tiers espace (Bhabha 1994), la postmetropolis (Soja 2000) ou encore le glocal. La mobilité des populations, leur densité croissante ainsi que les constellations sociales, culturelles et économiques qui en découlent soulèvent des questionnements pour les géographes, sociologues, anthropologues, urbanistes et philosophes. Le présent dossier s’inscrit dans le contexte actuel de cette réorientation des sciences sociales et humaines communément appelée le spatial turn (Warf et Arias 2009 : 1) qui a également influencé les études littéraires. L’émergence récente d’approches dites « géocentrées » qui conjuguent la théorie littéraire à la géographie, la sociologie, la philosophie, l’architecture et l’écologie témoigne de l’actualité du sujet proposé. Pour les chercheurs, lire le texte et son espace implique forcément de réfléchir au fonctionnement même du texte littéraire et à son rapport au monde, car l’espace-temps empirique traverse l’oeuvre en véritable sédiment du processus poétique tout en étant reconfiguré par le verbe et l’imaginaire. Ansgar Nünning écrit à ce propos :
+
+À partir de ses procédés narratifs, un roman organise les éléments sélectionnés et crée des mondes imaginaires dont ni les éléments spécifiques ni les relations que ceux-ci entretiennent entre eux ne produisent de simples calques d’espaces réels ou d’époques historiques. Il s’agit de modèles historiques et spatiaux qui ont été esthétiquement composés.
+
+Nünning 2009 : 43 ; notre traduction
+Qui plus est, la transfiguration du réel par la fiction met en avant la pertinence de la littérature pour d’autres disciplines « spatiales », c’est-à-dire ayant l’espace comme objet d’étude (la géographie, l’urbanisme, etc.). Lorsque nous étudions l’espace en termes littéraires, il ne s’agit donc pas seulement d’assimiler les théories d’autres disciplines mais aussi de montrer ce que les études littéraires leur offrent en retour (Prieto 2011 : 13).
+
+Comment donc appréhender, lire et interpréter l’espace fictionnel ? Quels nouveaux outils théoriques nous permettent d’en envisager l’immense potentiel ? Quelles sont ses fonctions au sein du texte littéraire ? La littérature peut-elle contribuer à la construction des espaces référentiels ? Ces interrogations se trouvent au coeur même de ce dossier d’Arborescences qui a pour objet de lire l’espace sous ses formes multiples : celle du « contexte géographique dans lequel le texte est produit ou auquel le texte se réfère », celle de « l’espace signifié par le texte », voire de l’organisation du monde fictionnel, ou encore celle de « l’espace physiquement occupé par le texte » (Ryan 2003 : 336 ; notre traduction). Par conséquent, les méthodes et outils d’analyse divergent. Certaines études traitent l’espace d’un point de vue géographique, tandis que d’autres l’appréhendent d’un point de vue narratologique, sémiotique ou encore historique. Étudiées de concert, ces déclinaisons sont nécessaires pour comprendre la façon dont l’espace informe, et est informé par, le discours de l’auteur, le genre littéraire, la lecture et les modalités narratives. L’acte poétique tout entier est empreint de la composante spatiale — du contenu du texte à sa structure, du mode de production à la réception. Les parcours méthodologique et théorique privilégiés par nos contributeurs les ont conduit vers un champ d’étude encore peu fréquenté mais extrêmement fertile et souvent interdisciplinaire. Dans les articles de ce dossier, la convergence des savoirs est source de dialogue avec l’Autre. Elle génère en effet de nouvelles connaissances et nous offre des éléments de réponse aux questions brûlantes qui définissent nos sociétés contemporaines.
+
+En guise d’entrée en matière à la première partie du dossier intitulée « Théorie et praxis », la contribution d’Antje Ziethen présente les différentes approches littéraires « géocentrées » qui ont été formalisées, consolidées ou renouvelées dans le sillage du remaniement épistémologique suscité par le spatial turn. Ziethen commence par une revue des recherches qui ont établi les bases théoriques d’une pensée spatiale en littérature et se tourne ensuite vers les études plus récentes. En premier lieu, sont abordés les travaux de Mikhaïl Bakhtine, Youri Lotman, Henri Mitterand et Jean Weisgerber afin d’exposer, en deuxième lieu, la narratologie de l’espace, les romans-géographes, la géocritique, la géographie de la littérature, la géopoétique, la pensée-paysage et l’écocritique. Ces prolégomènes positionnent le présent recueil dans un contexte scientifique précis tout en défrichant les grands axes des contributions présentées par la suite. À leur tour, Rachel Bouvet et Myriam Marcil-Bergeron ainsi que Richard Spavin poursuivent la réflexion théorique sur deux des approches abordées : la géopoétique et la géocritique. Rachel Bouvet et Myriam Marcil-Bergeron démontrent comment la géopoétique — champ de recherche et de création transdisciplinaire — permet de jeter un regard différent sur le récit de voyage. Elles exposent d’abord certains principes fondamentaux — le nomadisme, le dehors et le rapport à la terre — de cette théorie située à la croisée de la littérature et de la géographie. L’analyse des Écrits sur le sable d’Isabelle Eberhardt illustre ensuite en quoi consiste cette méthode qui mobilise les notions de paysage, de polysensorialité et de mouvement. Richard Spavin, quant à lui, met la géocritique de Bertrand Westphal en relation avec la théorie des climats de Jean Bodin. Cette conjonction originale de deux approches très différentes et séparées temporellement permet à l’auteur d’identifier des préoccupations similaires. En effet, Bodin et Westphal promeuvent une vision hybride du monde qui passe par une instrumentalisation rhétorique de l’espace.
+
+Dans la deuxième partie du dossier intitulé « Géographies imaginaires », Robin Craig et Nicholas Serruys explorent, respectivement, les géographies imaginaires du roman gothique au tournant du xixe siècle et de l’uchronie québécoise dans l’objectif de démontrer comment le genre littéraire et ses chronotopes cristallisent les préoccupations d’une époque spécifique. Dans son article, Robin Craig prend pour objet le roman Malvina de Sophie Cottin afin d’y étudier la fonction et la signification du château. Ce dernier est un espace hybride et interstitiel qui est emblématique de la transition du libertinage pendant le siècle des Lumières à celui du Romantisme, comme le montrent les figures érotisantes, telles le boudoir, le décor pictural évocateur de scènes frivoles, les fenêtres renvoyant sur l’espace érotisé du château au lieu de renvoyer sur le monde extérieur, tout ceci au service d’une maîtresse abusive qui inspire la crainte. Nicholas Serruys, pour sa part, se consacre à un genre encore peu présent dans les études géocentrées — l’uchronie, sous-genre de la science fiction. S’appuyant sur Les Voyageurs malgré eux de l’auteure québécoise Élisabeth Vonarburg, l’auteur sonde les mécanismes littéraires qui produisent un écart entre l’espace-temps factuel et fictif du Québec. Dans ce roman, la mise en scène d’une migration interdimensionnelle et de mondes parallèles appelle à une réévaluation des enjeux historiques et territoriaux propres à la société québécoise.
+
+Dans la troisième partie intitulée « Configurations urbaines », les contributions de Caroline Lebrec et Andrée Mélissa Ferron se tournent vers un des grands topoï du roman contemporain : la ville. Dans une étude consacrée à la représentation de la ville d’un auteur oulipien, Ian Monk, Lebrec montre comment l’espace de la ville contemporaine de banlieue reflète une vision urbaine du sale, du déchet, du rejet, à travers un portrait pluriel d’habitants humiliés et anonymisés. L’ancrage dans l’espace renvoie vers l’identitaire et non pas dans le sociologique, car l’accent est mis sur le lieu où l’on vit, plutôt quesur celui d’où l’on vient ou sur la catégorie socio-culturelle à laquelle on appartient. Lebrec révèle également comment le portrait de la ville imaginaire de la banlieue française s’inscrit à l’encontre du rayonnement culturel d’une « francitude » de carte postale pour s’ancrer dans un réel suintant la violence et le dégoût (Roubaud 2007 : 13). De son côté, Andrée Mélissa Ferron amène le lecteur dans le Moncton du poète Gérald Leblanc pour explorer le rapport entre texte, corps et espace urbain. Adoptant les allures d’un personnage, la ville s’impose comme médiatrice d’une identité acadienne multiple et dynamique libérée des contraintes du passé et du folklore. Prenant corps par le langage et le fantasme, le Moncton de Leblanc se défait de ses attributs d’espace cloîtré et oppressant afin de se muer en une béance sur le continent et sur l’Autre. L’Acadie se dessine ici non pas dans les traits traditionnels d’une collectivité monolithique mais par une polyphonie de subjectivités.
+
+Dans la quatrième partie de notre dossier intitulée « Textualités géographiques », Isabelle Chol, Tara Collington et Annabelle Seoane examinent l’espace à la fois d’un point de vue thématique et formel en abordant la poésie graphique, l’intermédialité et le discours des guides touristiques. À partir d’une lecture des recueils d’Emmanuel Hocquard et de Jean-Michel Espitallier, Isabelle Chol analyse l’espace en tant que support et medium d’une parole qui se donne non seulement à lire mais également à voir. En géomètre et géographe, le poète organise la graphie pour créer des taches, des trous, des lignes dont le sens dépasse les limites imposées par la page et les mots. L’espace scriptural se transforme ainsi en un lieu d’expérimentation ludique sur la matérialité de la poésie et sur sa spécificité à représenter le monde, lieu qui permet de déconstruire les structures et hiérarchies habituelles. De son côté, Tara Collington s’interroge sur les dispositifs spatiaux dans le récit Le Disparu de Salonique d’Aliette Armel, qui est illustré de 25 photographies prises par le grand-père de l’auteure. Ici, l’espace fictionnel procède à la fois du verbe et de l’image dont les modalités de représentations divergent. Le recours à l’intermédialité est source de confusion pour le lecteur. Il inscrit le texte dans un discours sur la guerre par un jeu de voilement/dévoilement de photographies d’espionnage donnant ainsi un éclairage au récit dans lequel la dimension de l’espionnage n’est pas lisible. Qui plus est, la démarche d’Armel produit un corps à la fois textuel et iconographique, qui soulève la question du rapport entre mimèsis et poïèsis. Enfin, en guise de clôture de notre dossier, Annabelle Seoane mobilise les outils de l’analyse du discours dans l’objectif de scruter les textes touristiques sur le Cambodge et d’exposer la façon dont ils produisent un espace « guidé ». L’auteure dévoile de la sorte les maintes stratégies du Guide Gallimard et du Guide du Routard qui rendent l’espace référentiel accessible et utile aux lecteurs, notamment par la fragmentation, l’hyperstructuration et la sélection d’informations données dans un mode propre à chacun des guides. La présente collection d’articles originaux et diversifiés apporte, nous en sommes convaincues, un éclairage sur les recherches actuelles en littérature française et francophone en mettant au jour la fonction fondamentale de l’espace fictionnel, les modalités de sa production et, par extension, la capacité du texte littéraire non seulement de représenter mais aussi d’informer la manière dont nous percevons le monde.
+Les effectifs et la part respective de femmes et d'hommes pris en compte pour l'institution du comité social d'administration pour les centres de ressources d'expertise et de performance sportive listés à l'article 1er sont ainsi arrêtés au 1er janvier 2022 :
+
+
+- centre de ressources d'expertise et de performance sportive de Bordeaux : 103 agents représentés dont 57 femmes soit 55 % et dont 46 hommes soit 45 % ;
+- centre de ressources d'expertise et de performance sportive du Centre : 58 agents représentés dont 33 hommes (57 %) et dont 25 femmes (43 %) ;
+- centre de ressources d'expertise et de performance sportive de Dijon : 79 agents représentés dont 40 femmes soit 50,63 % et dont 39 hommes soit 49,36 % ;
+- centre de ressources d'expertise et de performance sportive Ile-de-France : 92 agents représentés dont 50 femmes (54,35 %) et 42 hommes (45,65 %) ;
+- centre de ressources d'expertise et de performance sportive de Montpellier : 122 agents représentés dont 59 femmes soit 48,36 % et dont 63 hommes soit 51,64 % ;
+- centre de ressources d'expertise et de performance sportive de Nancy : 62 agents représentés dont 30 femmes soit 48,4 % et dont 32 hommes soit 51,6 % ;
+- centre de ressources d'expertise et de performance sportive des Pays de la Loire : 72 agents représentés dont 37 femmes soit 51 % et dont 35hommes soit 49 % ;
+- centre de ressources d'expertise et de performance sportive de Pointe-à-Pitre : 62 agents représentés dont 33 femmes soit 53 % et dont 29 hommes soit 47 % ;
+- centre de ressources d'expertise et de performance sportive de Poitiers : 76 agents représentés dont 38 femmes soit 50 % et dont 38 hommes soit 50 % ;
+- centre de ressources d'expertise et de performance sportive de Reims : 71 agents représentés soit 38 femmes (54 %) et 33 hommes (46 %) ;
+- centre de ressources d'expertise et de performance sportive La Réunion : 67 agents représentés dont 29 femmes soit 43 % et dont 38 hommes soit 57 % ;
+- centre de ressources d'expertise et de performance sportive de Rhône-Alpes : 79 agents représentés dont 41 femmes soit 52 % et dont 38 hommes soit 48 % ;
+- centre de ressources d'expertise et de performance sportive de Strasbourg : 51 agents représentés dont 29 femmes soit 56,87 % et dont 22 hommes soit 43,13 % ;
+- centre de ressources d'expertise et de performance sportive de Provence-Alpes-Côte d'Azur : 179 agents représentés dont 94 femmes soit 52,51 % et dont 85 hommes soit 47,49 % ;
+- centre de ressources d'expertise et de performance sportive de Toulouse : 93 représentés dont 46 femmes soit 49 % et dont 47 hommes soit 51 % ;
+- centre de ressources d'expertise et de performance sportive de Vichy : 68 agents représentés dont 36 femmes soit 53 % et 32 hommes soit 47 % ;
+- centre de ressources d'expertise et de performance sportive de Wattignies : 79 agents représentés dont 47 femmes soit 59,5 % et dont 32 hommes soit 40,5 %.
+Il est institué, auprès de chaque directeur de centre de ressources d'expertise et de performance sportive dont la liste suit, un comité social d'administration de proximité dénommé comité social d'administration d'établissement, en application de l'article 6 du décret du 20 novembre 2020 susvisé :
+
+
+- centre de ressources d'expertise et de performance sportive de Bordeaux ;
+- centre de ressources d'expertise et de performance sportive du Centre ;
+- centre de ressources d'expertise et de performance sportive de Dijon ;
+- centre de ressources d'expertise et de performance sportive d'Ile-de-France ;
+- centre de ressources d'expertise et de performance sportive de Montpellier ;
+- centre de ressources d'expertise et de performance sportive de Nancy ;
+- centre de ressources d'expertise et de performance sportive des Pays de la Loire ;
+- centre de ressources d'expertise et de performance sportive de Pointe-à-Pitre ;
+- centre de ressources d'expertise et de performance sportive de Poitiers ;
+- centre de ressources d'expertise et de performance sportive de Reims ;
+- centre de ressources d'expertise et de performance sportive de La Réunion ;
+- centre de ressources d'expertise et de performance sportive de Rhône-Alpes ;
+- centre de ressources d'expertise et de performance sportive de Strasbourg ;
+- centre de ressources d'expertise et de performance sportive de Provence-Alpes-Côte d'Azur ;
+- centre de ressources d'expertise et de performance sportive de Toulouse ;
+- centre de ressources d'expertise et de performance sportive de Vichy ;
+- centre de ressources d'expertise et de performance sportive de Wattignies.
+
+La Poste et les organisations syndicales qui satisfont aux critères de respect des valeurs républicaines et d'indépendance, légalement constituées depuis au moins deux ans et dont le champ professionnel et géographique couvre l'entreprise ou l'établissement concernés peuvent négocier les accords mentionnés aux articles L. 2314-6, L. 2314-7, L. 2314-12, L. 2314-13, L. 2314-15, L. 2314-27, L. 2314-28 et L. 2316-8 du code du travail.
+Les organisations syndicales disposant d'au moins un siège dans les comités techniques ainsi que les syndicats et les organisations syndicales mentionnés au deuxième alinéa de l'article L. 2314-5 du même code y sont également invités, par courrier.
+L'invitation à négocier mentionnée au présent I parvient au plus tard quinze jours avant la date de la première réunion de négociation.
+La validité des accords mentionnés aux articles L. 2314-12 et L. 2314-27 du code du travail est subordonnée à leur signature par toutes les organisations syndicales disposant d'au moins un siège au comité technique national.
+La validité des autres accords mentionnés au premier alinéa du présent I est subordonnée à leur signature par la majorité des organisations syndicales ayant participé à leur négociation, dont les organisations syndicales disposant d'au moins un siège au comité technique national et ayant recueilli, aux dernières élections de ce comité, plus de 50 % des suffrages exprimés en faveur de ces organisations.
+II. - Sont applicables à l'ensemble du personnel de La Poste les articles L. 2135-8, L. 2141-5, L. 2141-5-1, L. 2142-1, L. 2142-6, L. 2142-9, L. 2145-12, L. 2242-10 à L. 2242-12, L. 2312-19, L. 2312-21, L. 2312-55, L. 2312-81, L. 2312-82, L. 2313-1 à L. 2313-7, L. 2314-1, L. 2314-4, L. 2314-6, L. 2314-7, L. 2314-9, L. 2314-11 à L. 2314-15, L. 2314-17 à L. 2314-19, L. 2314-23, L. 2314-25 à L. 2314-34, L. 2315-2, L. 2315-4, L. 2315-39, L. 2315-41, L. 2315-43, L. 2315-45, L. 2315-79, L. 2316-8, L. 2316-11 et L. 2316-23 du code du travail.
+La Poste et les organisations syndicales disposant d'au moins un siège au comité technique national peuvent négocier les accords prévus à ces mêmes articles, à l'exclusion de ceux prévus au I du présent article.
+La validité de ces accords est subordonnée à leur signature, d'une part, par La Poste ou son représentant et, d'autre part, par une ou plusieurs organisations syndicales disposant d'au moins un siège au comité technique national et ayant recueilli, aux dernières élections de ce comité, plus de 50 % des suffrages exprimés en faveur de ces organisations.
+III. - Les salariés demandeurs d'organisation des élections et candidats aux fonctions de membre élu de la délégation du personnel du comité social et économique bénéficient de la protection en cas de rupture ou de transfert du contrat de travail dans les conditions prévues au livre IV de la deuxième partie du code du travail. Jusqu'à la mise en place des comités sociaux et économiques à La Poste, la commission consultative paritaire compétente rend un avis sur la rupture ou le transfert du contrat de travail de ces salariés.
+Bénéficient également de la protection prévue au chapitre Ier du titre Ier du même livre IV les salariés anciens représentants du personnel élus au sein d'une instance de représentation du personnel propre à La Poste, pendant les six premiers mois à compter de l'expiration de leur mandat, dans des conditions déterminées par décret en Conseil d'Etat.
+IV. - L'ensemble des biens, droits et obligations, créances et dettes des comités d'hygiène, de sécurité et des conditions de travail de La Poste sont transférés de plein droit et en pleine propriété aux comités sociaux et économiques de La Poste mis en place au terme du mandat en cours des instances précitées, et au plus tard à la date prévue au I de l'article 1er de la présente loi.
+La présente loi sera exécutée comme loi de l'Etat.
+Le comité social d'administration d'établissement est compétent dans les matières et conditions fixées par le titre III du même décret pour les questions intéressant l'organisation et le fonctionnement de l'établissement.
+
+
+
+Ouvrons tout d’abord le bal avec Yann Arthus-Bertrand, l’emblématique photographe / reporter qui a capturé la beauté du monde aux 4 coins de la planète.
+“Home” a déjà plus de 10 ans (il est sorti en 2009), les cris d’alerte passés à l’époque sont pourtant les mêmes aujourd’hui. Terrible constat. En effet, “les décors de cartes postales” ont pris du plomb dans l’aile.
+
+Synopsis
+
+En 200 000 ans d’existence, l’homme a rompu l’équilibre sur lequel la Terre vivait depuis 4 milliards d’années. Réchauffement climatique, puisement des ressources, extinction des espèces : l’homme a mis en péril sa propre demeure. Mais il est trop tard pour être pessimiste : il reste à peine dix ans à l’humanité pour inverser la tendance, prendre conscience de son exploitation démesurée des richesses de la Terre, et changer son mode de consommation.
+Un documentaire sur l’environnement peu optimiste, mais qui ne se voile pas la face sur l’urgence de la situation.
