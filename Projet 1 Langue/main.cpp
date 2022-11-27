@@ -6,10 +6,6 @@
 #include <cstring>
 
 using namespace std;
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
 
 
 //Méthode qui calcul le nombre d'occurrences de chaque lettre de l'alphabet
@@ -230,21 +226,12 @@ float * Occurrences_Lettres(char * filename, float *tab_occ) {
         printf("Ouverture impossible en mode lecture");
     }
 
-    for(int i = 0; i < 26; i++) {
-        cout<<"tab_occ["<<i<<"] = "<<tab_occ[i]<<endl;
-    }
-
     return tab_occ;
 };
 
 
-void Calcul_ecart(float* T_occurence) {
+float* Calcul_ecart(float* T_occurence,float* tab_ecart) {
 
-    for(int i = 0; i < 26; i++) {
-        cout<<"T_occurence["<<i<<"] = "<<T_occurence[i]<<endl;
-    }
-
-    //float T_occurence[26] = {8268,494,3675,2830,8172,753,1499,589,9132,11,231,4996,1747,5087,7535,1685,189,4562,3478,5107,2311,925,26,28,110,648};
     float ecart_anglais = 0;
     float ecart_francais = 0;
     float ecart_allemand = 0;
@@ -273,69 +260,59 @@ void Calcul_ecart(float* T_occurence) {
     //Somme de tout les éléments de T_occurence (en paramètre)
     for(int i=0;i<26;i++){
         somme_elem_de_T_ocurrence = somme_elem_de_T_ocurrence + T_occurence[i];
-        cout<<"somme occu = "<<somme_elem_de_T_ocurrence<<endl;
     }
-    cout<<"Somme T_occurence = "<<somme_elem_de_T_ocurrence<<endl;
 
     //Somme de tout les éléments de T_occurence_anglais
     for(int i=0; i<26;i++){
         somme_elem_de_T_anglais = somme_elem_de_T_anglais + T_anglais[i];
     }
-    cout<<"Somme T_anglais = "<<somme_elem_de_T_anglais<<endl;
 
     //Somme de tout les éléments de T_occurence_francais
     for(int i=0; i<26;i++){
         somme_elem_de_T_francais = somme_elem_de_T_francais + T_francais[i];
     }
-    cout<<"Somme T_francais = "<<somme_elem_de_T_francais<<endl;
 
     //Somme de tout les éléments de T_occurence_allemand
     for(int i=0; i<26;i++){
         somme_elem_de_T_allemand = somme_elem_de_T_allemand + T_allemand[i];
     }
-    cout<<"Somme T_allemand = "<<somme_elem_de_T_allemand<<endl;
 
     //Somme de tout les éléments de T_occurence_espagnol
     for(int i=0; i<26;i++){
         somme_elem_de_T_espagnol = somme_elem_de_T_espagnol + T_espagnol[i];
     }
-    cout<<"Somme T_espagnol = "<<somme_elem_de_T_espagnol<<endl;
 
     //Somme de tout les éléments de T_occurence_iatlien
     for(int i=0; i<26;i++){
         somme_elem_de_T_italien = somme_elem_de_T_italien + T_italien[i];
     }
-    cout<<"Somme T_italien = "<<somme_elem_de_T_italien<<endl;
 
 
-    cout<<"Resultat :"<<endl;
+
     //calcul de la différence euclidienne anglais (sans la racine carré)
-    for(int i=0; i<sizeof(T_anglais)/sizeof(int);i++){
-        //cout<<T_occurence[i]<<" / "<<somme_elem_de_T_ocurrence <<" = "<<T_occurence[i]/somme_elem_de_T_ocurrence<<endl;
-        //cout<<(T_anglais[i]/somme_elem_de_T_anglais)<<endl;
+    for(int i=0; i<26;i++){
         resultat_anglais = ((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_anglais[i]/somme_elem_de_T_anglais))*((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_anglais[i]/somme_elem_de_T_anglais));
     }
-    cout<<resultat_anglais<<endl;
+
     //calcul de la différence euclidienne francais
-    for(int i=0; i<sizeof(T_francais)/sizeof(int);i++){
+    for(int i=0; i<26;i++){
         resultat_francais = ((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_francais[i]/somme_elem_de_T_francais))*((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_francais[i]/somme_elem_de_T_francais));
     }
-    cout<<resultat_francais<<endl;
+
     //calcul de la différence euclidienne allemand
-    for(int i=0; i<sizeof(T_allemand)/sizeof(int);i++){
+    for(int i=0; i<26;i++){
         resultat_allemand = ((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_allemand[i]/somme_elem_de_T_allemand))*((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_allemand[i]/somme_elem_de_T_allemand));
     }
-    cout<<resultat_allemand<<endl;
+
     //calcul de la différence euclidienne espagnol
-    for(int i=0; i<sizeof(T_espagnol)/sizeof(int);i++){
+    for(int i=0; i<26;i++){
         resultat_espagnol = ((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_espagnol[i]/somme_elem_de_T_espagnol))*((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_espagnol[i]/somme_elem_de_T_espagnol));
     }
-    cout<<resultat_espagnol<<endl;
+
     //calcul de la différence euclidienne italien
-    for(int i=0; i<sizeof(T_italien)/sizeof(int);i++){
+    for(int i=0; i<26;i++){
         resultat_italien = ((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_italien[i]/somme_elem_de_T_italien))*((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_italien[i]/somme_elem_de_T_italien));
     }
-    cout<<resultat_italien<<endl;
 
     //Racine final du calcul de l'écart
     ecart_anglais = sqrt(resultat_anglais);
@@ -343,14 +320,85 @@ void Calcul_ecart(float* T_occurence) {
     ecart_allemand = sqrt(resultat_allemand);
     ecart_espagnol = sqrt(resultat_espagnol);
     ecart_italien = sqrt(resultat_italien);
-
+/*
     cout<<"Ecart Anglais : "<<setprecision(2)<<ecart_anglais<<" (Le pourcentage de ressemblance est de "<<100-ecart_anglais<<"%)"<<endl;
     cout<<"Ecart Francais : "<<setprecision(2)<<ecart_francais<<" (Le pourcentage de ressemblance est de "<<100-ecart_francais<<"%)"<<endl;
     cout<<"Ecart Allemand : "<<setprecision(2)<<ecart_allemand<<" (Le pourcentage de ressemblance est de "<<100-ecart_allemand<<"%)"<<endl;
     cout<<"Ecart Espagnol : "<<setprecision(2)<<ecart_espagnol<<" (Le pourcentage de ressemblance est de "<<100-ecart_espagnol<<"%)"<<endl;
     cout<<"Ecart Italien : "<<setprecision(2)<<ecart_italien<<" (Le pourcentage de ressemblance est de "<<100-ecart_italien<<"%)"<<endl;
+*/
+    tab_ecart[0]={ecart_anglais};
+    tab_ecart[1]={ecart_francais};
+    tab_ecart[2]={ecart_allemand};
+    tab_ecart[3]={ecart_espagnol};
+    tab_ecart[4]={ecart_italien};
+
+    return tab_ecart;
 
 }
+
+void Trouve_Langue(float *tableau_ecart,char * filename) {
+    float plus_petit_ecart = 10000;
+    string langue_trouvee;
+    int taille=0;
+    char Texte_Ecart[5][32] = {"Anglais ; écart : ","Français ; écart : ","Allemand ; écart : ","Espagnol ; écart : ","Italien ; écart : "};
+
+    for(int i=0;i<5;i++){
+        if(plus_petit_ecart>tableau_ecart[i]){
+            plus_petit_ecart=tableau_ecart[i];
+        }
+    }
+    //cout<<"plus_petit_ecart = "<<plus_petit_ecart<<endl;
+
+    for(int i=0;i<5;i++){
+        if(plus_petit_ecart==tableau_ecart[i]){
+            if(i==0){
+                langue_trouvee="Langue trouvée : Anglais";
+                taille=24;
+            }else if(i==1){
+                langue_trouvee="Langue trouvée : Francais";
+                taille=25;
+            }else if(i==2){
+                langue_trouvee="Langue trouvée : Allemand";
+                taille=25;
+            }else if(i==3){
+                langue_trouvee="Langue trouvée : Espagnol";
+                taille=25;
+            }else if(i==4){
+                langue_trouvee="Langue trouvée : Italien";
+                taille=24;
+            }
+        }
+    }
+
+    FILE* fic = NULL;
+    //Ouverture du fichier en mode append
+            fic = fopen(filename,"a");
+            if (fic != NULL){
+                //Ecriture à la fin du fichier
+                fprintf(fic, "\n\n", ' ');
+                for(int i = 0; i < taille; i++) {
+                    fputc(langue_trouvee[i], fic);
+                }
+
+
+                fprintf(fic, "\n");
+                for(int i = 0; i < 5; i++) {
+                    fprintf(fic,"%s",Texte_Ecart[i]);
+                    fprintf(fic,"%lf\n",tableau_ecart[i]);
+                }
+
+
+                //Fermeture du fichier en mode append
+                fclose (fic);
+            }
+            else {
+                printf("Ouverture impossible en mode append");
+            }
+}
+
+
+
 
 //Programme principal
 int main() {
@@ -399,16 +447,11 @@ int main() {
     cout<<cheminAcces<<endl;
 
     float tab_occ[26];
+    float tab_ecart[5];
 
-    //Francais();
-    float *tab = Occurrences_Lettres(cheminAcces, tab_occ);
-
-    //cout<<tab<<endl;
-    for(int i = 0; i < 26; i++) {
-        cout<<"tab["<<i<<"] = "<<tab[i]<<endl;
-    }
-
-    Calcul_ecart(tab);
+    float *tableau_occurrence = Occurrences_Lettres(cheminAcces, tab_occ);
+    float *tableau_ecart = Calcul_ecart(tableau_occurrence,tab_ecart);
+    Trouve_Langue(tableau_ecart,cheminAcces);
 
     return 0;
 }
