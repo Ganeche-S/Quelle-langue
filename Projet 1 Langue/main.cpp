@@ -3,7 +3,7 @@
 #include <iostream>
 #include <cmath>
 #include <iomanip>
-
+#include <cstring>
 
 using namespace std;
 using std::cout;
@@ -13,7 +13,7 @@ using std::string;
 
 
 //Méthode qui calcul le nombre d'occurrences de chaque lettre de l'alphabet
-float *Occurrences_Lettres(float *tab_occ) {
+float * Occurrences_Lettres(char * filename, float *tab_occ) {
     char occ;
     int nbOccA = 0, nbOccB = 0, nbOccC = 0, nbOccD = 0, nbOccE = 0, nbOccF = 0, nbOccG = 0, nbOccH = 0, nbOccI = 0, nbOccJ = 0, nbOccK = 0, nbOccL = 0, nbOccM = 0, nbOccN = 0, nbOccO = 0, nbOccP = 0, nbOccQ = 0, nbOccR = 0, nbOccS = 0, nbOccT = 0, nbOccU = 0, nbOccV = 0, nbOccW = 0, nbOccX = 0, nbOccY = 0, nbOccZ = 0;
     char tab_char[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'k', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
@@ -22,7 +22,7 @@ float *Occurrences_Lettres(float *tab_occ) {
     int caract;
     FILE* fic = NULL;
     //Ouverture du fichier en mode lecture
-    fic = fopen("gordon.txt","r");
+    fic = fopen(filename,"r");
     if (fic != NULL){
 
     //Tant que la lecture du fichier n'est pas terminé, on regarde la lettre courante et on incremente le nombre d'occurences si il y a une correspondance
@@ -192,7 +192,7 @@ float *Occurrences_Lettres(float *tab_occ) {
             tab_occ[25] = nbOccZ;
 
             //Ouverture du fichier en mode append
-            fic = fopen("Texte_Tab_occurence.txt","a");
+            fic = fopen(filename,"a");
             if (fic != NULL){
                 string occText = "Occurrences du texte à analyser";
                 string occTab = "Tableau d'occurrences";
@@ -352,13 +352,56 @@ void Calcul_ecart(float* T_occurence) {
 
 }
 
-int main()
-{
+//Programme principal
+int main() {
+    //Déclaration des variables globales
+    int choix;
+    char * cheminAcces = (char *) malloc(40);
+    char * nomTxt = (char *) malloc(40);
+    char * extTxt = (char *) malloc(3);;
+
+    //Interface utilisateur
+    cout<<"Bonjour vous\n"<<endl;
+    cout<<"Et bienvenue dans notre programme spécial qui vous permettra de trouver les differentes occurences de votre texte ainsi que sa langue parmis les suivantes : \nle français, l'anglais, l'espagnol, l'allemand et l'italien\n\n"<<endl;
+    cout<<"Saisissez un chiffre (1) pour le choix numero 1 et le chiffre (2) pour le choix numero 2 :\n"<<endl;
+    cout<<"Choix 1 : Souhaitez-vous generer les occurrences des lettres\n"<<endl;
+    cout<<"Choix 2 : Souhaitez-vous generer la langue du texte\n"<<endl;
+    scanf("%d", &choix);
+
+    //Cas si le choix n'est ni le 1 et ni le 2
+    while(choix != 1 && choix != 2) {
+        cout<<"\nChoix incorrecte !\n"<<endl;
+        cout<<"Merci de resaisir votre choix\n"<<endl;
+        cout<<"Choix 1 : Souhaitez-vous generer les occurrences des lettres\n"<<endl;
+        cout<<"Choix 2 : Souhaitez-vous generer la langue du texte\n"<<endl;
+        scanf("%d", &choix);
+    }
+
+    //Si l'on recherche les occurrences des lettres d'un texte
+    if(choix==1) {
+        cout<<"Vous avez choisi les occurences des lettres!\n"<<endl;
+        cout<<"\nSaisir le chemin d'acces de votre fichier texte (n'oubliez pas l'antislash de fin) : \n"<<endl;
+        scanf("%s", cheminAcces);
+        cout<<cheminAcces<<endl;
+
+        cout<<"\nSaisir le nom de votre fichier texte : \n"<<endl;
+        scanf("%s", nomTxt);
+        cout<<nomTxt<<endl;
+
+        cout<<"\nSaisir l'extension de votre fichier texte : \n"<<endl;
+        scanf("%s", extTxt);
+        cout<<extTxt<<endl;
+    }
+
+
+    strcat(cheminAcces, nomTxt);
+    strcat(cheminAcces, extTxt);
+    cout<<cheminAcces<<endl;
 
     float tab_occ[26];
 
     //Francais();
-    float *tab = Occurrences_Lettres(tab_occ);
+    float *tab = Occurrences_Lettres(cheminAcces, tab_occ);
 
     //cout<<tab<<endl;
     for(int i = 0; i < 26; i++) {
