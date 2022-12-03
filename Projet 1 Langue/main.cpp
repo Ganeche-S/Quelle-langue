@@ -2,7 +2,6 @@
 #include<stdlib.h>
 #include <iostream>
 #include <cmath>
-#include <iomanip>
 #include <cstring>
 
 using namespace std;
@@ -407,10 +406,11 @@ int main() {
     char * cheminAcces = (char *) malloc(40);
     char * nomTxt = (char *) malloc(40);
     char * extTxt = (char *) malloc(3);;
+    float *tableau_occurrence;
 
     //Interface utilisateur
     cout<<"Bonjour vous\n"<<endl;
-    cout<<"Et bienvenue dans notre programme spécial qui vous permettra de trouver les differentes occurences de votre texte ainsi que sa langue parmis les suivantes : \nle français, l'anglais, l'espagnol, l'allemand et l'italien\n\n"<<endl;
+    cout<<"Et bienvenue dans notre programme special qui vous permettra de trouver les differentes occurences de votre texte ainsi que sa langue parmis les suivantes : \nle français, l'anglais, l'espagnol, l'allemand et l'italien\n\n"<<endl;
     cout<<"Saisissez un chiffre (1) pour le choix numero 1 et le chiffre (2) pour le choix numero 2 :\n"<<endl;
     cout<<"Choix 1 : Souhaitez-vous generer les occurrences des lettres\n"<<endl;
     cout<<"Choix 2 : Souhaitez-vous generer la langue du texte\n"<<endl;
@@ -426,7 +426,7 @@ int main() {
     }
 
     //Si l'on recherche les occurrences des lettres d'un texte
-    if(choix==1) {
+    if(choix==1 || choix==2) {
         cout<<"Vous avez choisi les occurences des lettres!\n"<<endl;
         cout<<"\nSaisir le chemin d'acces de votre fichier texte (n'oubliez pas l'antislash de fin) : \n"<<endl;
         scanf("%s", cheminAcces);
@@ -436,7 +436,7 @@ int main() {
         scanf("%s", nomTxt);
         cout<<nomTxt<<endl;
 
-        cout<<"\nSaisir l'extension de votre fichier texte : \n"<<endl;
+        cout<<"\nSaisir l'extension de votre fichier texte (n'oubliez pas le point au debut): \n"<<endl;
         scanf("%s", extTxt);
         cout<<extTxt<<endl;
     }
@@ -449,9 +449,15 @@ int main() {
     float tab_occ[26];
     float tab_ecart[5];
 
-    float *tableau_occurrence = Occurrences_Lettres(cheminAcces, tab_occ);
-    float *tableau_ecart = Calcul_ecart(tableau_occurrence,tab_ecart);
-    Trouve_Langue(tableau_ecart,cheminAcces);
+    if(choix==1) {
+        float *tableau_occurrence = Occurrences_Lettres(cheminAcces, tab_occ);
+    }
+    if(choix==2) {
+        float *tableau_occurrence = Occurrences_Lettres(cheminAcces, tab_occ);
+        float *tableau_ecart = Calcul_ecart(tableau_occurrence,tab_ecart);
+        Trouve_Langue(tableau_ecart,cheminAcces);
+    }
+
 
     return 0;
 }
