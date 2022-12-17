@@ -10,7 +10,7 @@
 1669569559 source:c:\users\youss\desktop\projet c\quelle-langue\projet 1 langue\test youssef.c
 	<iostream>
 
-1670081956 source:c:\users\sivas\desktop\info\eicnam\c\quelle-langue\projet 1 langue\main.cpp
+1670082241 source:c:\users\sivas\desktop\info\eicnam\c\quelle-langue\projet 1 langue\main.cpp
 	<stdio.h>
 	<stdlib.h>
 	<iostream>
@@ -19,4 +19,11 @@
 
 1669568415 source:c:\users\sivas\desktop\info\eicnam\c\quelle-langue\projet 1 langue\test youssef.c
 	<iostream>
+
+1670082241 source:c:\users\sivas\desktop\info\eicnam\c\quelle-langue\projet_1_langue\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<cmath>
+	<cstring>
 
