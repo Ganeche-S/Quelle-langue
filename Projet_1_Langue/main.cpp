@@ -192,7 +192,7 @@ float * Occurrences_Lettres(char * filename, float *tab_occ) {
                 string occTab = "Tableau d'occurrences";
 
                 //Ecriture à la fin du fichier
-                fprintf(fic, "\n\n", ' ');
+                fprintf(fic, "\n\n");
                 for(int i = 0; i < 32; i++) {
                     fputc(occText[i], fic);
                 }
@@ -203,7 +203,7 @@ float * Occurrences_Lettres(char * filename, float *tab_occ) {
                     fprintf(fic, "%.0f", tab_occ[i]);
                     fprintf(fic, " %c ", ';');
                 }
-                fprintf(fic, "\n", ' ');
+                fprintf(fic, "\n");
                 for(int i = 0; i < 24; i++) {
                     fputc(occTab[i], fic);
                 }
@@ -369,7 +369,7 @@ void Trouve_Langue(float *tableau_ecart,char * filename) {
             fic = fopen(filename,"a");
             if (fic != NULL){
                 //Ecriture à la fin du fichier
-                fprintf(fic, "\n\n", ' ');
+                fprintf(fic, "\n\n");
                 for(int i = 0; i < taille; i++) {
                     fputc(langue_trouvee[i], fic);
                 }
@@ -400,7 +400,6 @@ int main() {
     char * cheminAcces = (char *) malloc(40);
     char * nomTxt = (char *) malloc(40);
     char * extTxt = (char *) malloc(3);;
-    float *tableau_occurrence;
 
     //Interface utilisateur
     cout<<"Bonjour vous\n"<<endl;
@@ -442,7 +441,7 @@ int main() {
     //Cas si l'on recherche les occurrences des lettres du texte
     if(choix==1) {
         cout<<"Travail en cours. veuillez patientez..."<<endl;
-        float *tableau_occurrence = Occurrences_Lettres(cheminAcces, tab_occ);
+        Occurrences_Lettres(cheminAcces, tab_occ);
         cout<<"Travail terminer !"<<endl;
     }
     //Cas si l'on recherche la langue du texte
