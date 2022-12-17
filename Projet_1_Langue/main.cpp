@@ -25,49 +25,52 @@ float * Occurrences_Lettres(char * filename, float *tab_occ) {
 
                 caract = fgetc(fic);
 
-                if(!(caract >= 48 && caract <= 57)){
-                    // Transforme les accents similaires a lettre "a" en "a"
-                    if ((caract >= 131 && caract <= 134) || (caract >= 142 && caract <= 143) || caract==160 || (caract >= 181 && caract <= 183) || (caract >= 198 && caract <= 199) || (caract >= -125 && caract <= -122) || (caract >= -114 && caract <= -113) || caract==-96 || (caract >= -75 && caract <= -73) || (caract >= -58 && caract <= -57)){
-                        caract=97;
-                    }
-                    // Transforme les accents similaires a lettre "c" en "c"
-                    else if(caract==128 || caract==135 || caract==-121){
-                        caract=99;
-                    }
-                    // Transforme les accents similaires a lettre "d" en "d"
-                    else if(caract == 209 || caract==-47){
-                        caract=100;
-                    }
-                    // Transforme les accents similaires a lettre "e" en "e"
-                    else if(caract==130 || (caract >= 136 && caract <= 138) || caract==144 || (caract >= 210 && caract <= 212) || caract==-126 || (caract >= -120 && caract <= -118) || caract==-112 ||(caract >= -46 && caract <= -44)){
-                        caract=101;
-                    }
-                    // Transforme les accents similaires a lettre "i" en "i"
-                    else if((caract >= 139 && caract <= 141) || caract==161 || caract==173 || (caract >= 214 && caract <= 216) || caract==222 || (caract >= -117 && caract <= -115) || caract==-95 || (caract >= -42 && caract <= -34)){
-                        caract=105;
-                    }
-                    // Transforme les accents similaires a lettre "n" en "n"
-                    else if((caract >= 164 && caract <= 165) || (caract >= -92 && caract <= -91)){
-                        caract=110;
-                    }
-                    // Transforme les accents similaires a lettre "o" en "o"
-                    else if((caract >= 147 && caract <= 149) || caract==153 || caract==162 || caract==208 || caract==224 || (caract >= 226 && caract <= 229) || (caract >= -109 && caract <= -107) || caract==-103 || caract==-94 || (caract >= -32 && caract <= -27)){
-                        caract=111;
-                    }
-                    // Transforme les accents similaires a lettre "u" en "u"
-                    else if(caract==129 || (caract >= 150 && caract <= 151) || caract==154 || caract==163 || (caract >= 233 && caract <= 235) || caract==-127 || (caract >= -106 && caract <= -105) || caract==-102 || caract==-93 || (caract >= -23 && caract <= -21)){
-                        caract=117;
-                    }
-                    // Transforme les accents similaires a lettre "y" en "y"
-                    else if(caract==152 || (caract >= 236 && caract <= 237) || caract==-104 || (caract >= -20 && caract <= -19)){
-                        caract=121;
-                    }
+    //Code qui gére les accents et majuscule
+                // Transforme les accents similaires a lettre "a" en "a"
+                if ((caract >= 131 && caract <= 134) || (caract >= 142 && caract <= 143) || caract==160 || (caract >= 181 && caract <= 183) || (caract >= 198 && caract <= 199) || (caract >= -125 && caract <= -122) || (caract >= -114 && caract <= -113) || caract==-96 || (caract >= -75 && caract <= -73) || (caract >= -58 && caract <= -57)){
+                    caract=97;
                 }
-                // Transforme les majuscules en minuscule ( A= int(a)-32 <=> A=99-32 )
-                else if(caract>=65 && caract<=90){
-                    caract = caract+32;
+                // Transforme les accents similaires a lettre "c" en "c"
+                else if(caract==128 || caract==135 || caract==-121){
+                    caract=99;
+                }
+                // Transforme les accents similaires a lettre "d" en "d"
+                else if(caract == 209 || caract==-47){
+                    caract=100;
+                }
+                // Transforme les accents similaires a lettre "e" en "e"
+                else if(caract==130 || (caract >= 136 && caract <= 138) || caract==144 || (caract >= 210 && caract <= 212) || caract==-126 || (caract >= -120 && caract <= -118) || caract==-112 ||(caract >= -46 && caract <= -44)){
+                    caract=101;
+                }
+                // Transforme les accents similaires a lettre "i" en "i"
+                else if((caract >= 139 && caract <= 141) || caract==161 || caract==173 || (caract >= 214 && caract <= 216) || caract==222 || (caract >= -117 && caract <= -115) || caract==-95 || (caract >= -42 && caract <= -34)){
+                    caract=105;
+                }
+                // Transforme les accents similaires a lettre "n" en "n"
+                else if((caract >= 164 && caract <= 165) || (caract >= -92 && caract <= -91)){
+                    caract=110;
+                }
+                // Transforme les accents similaires a lettre "o" en "o"
+                else if((caract >= 147 && caract <= 149) || caract==153 || caract==162 || caract==208 || caract==224 || (caract >= 226 && caract <= 229) || (caract >= -109 && caract <= -107) || caract==-103 || caract==-94 || (caract >= -32 && caract <= -27)){
+                    caract=111;
+                }
+                // Transforme les accents similaires a lettre "u" en "u"
+                else if(caract==129 || (caract >= 150 && caract <= 151) || caract==154 || caract==163 || (caract >= 233 && caract <= 235) || caract==-127 || (caract >= -106 && caract <= -105) || caract==-102 || caract==-93 || (caract >= -23 && caract <= -21)){
+                    caract=117;
+                }
+                // Transforme les accents similaires a lettre "y" en "y"
+                else if(caract==152 || (caract >= 236 && caract <= 237) || caract==-104 || (caract >= -20 && caract <= -19)){
+                    caract=121;
                 }
 
+                // Transforme les majuscules en minuscule ( A= int(a)-32 <=> A=99-32 )
+                if(caract>=65 && caract<=90){
+                    caract = caract+32;
+                }
+    //Fin Code accent et maj
+
+
+    //Calcul de l'occurrence
                 occ = static_cast<char>(caract);
                 if (occ == 'a') {
                     nbOccA = nbOccA + 1;
@@ -147,6 +150,7 @@ float * Occurrences_Lettres(char * filename, float *tab_occ) {
                 else if (occ == 'z') {
                     nbOccZ = nbOccZ + 1;
                 }
+    //Fin calcul occurence
 
             } while (caract != EOF);
 
@@ -285,27 +289,27 @@ float* Calcul_ecart(float* T_occurence,float* tab_ecart) {
 
     //calcul de la différence euclidienne anglais (sans la racine carré)
     for(int i=0; i<26;i++){
-        resultat_anglais = ((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_anglais[i]/somme_elem_de_T_anglais))*((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_anglais[i]/somme_elem_de_T_anglais));
+        resultat_anglais += ((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_anglais[i]/somme_elem_de_T_anglais))*((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_anglais[i]/somme_elem_de_T_anglais));
     }
 
     //calcul de la différence euclidienne francais
     for(int i=0; i<26;i++){
-        resultat_francais = ((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_francais[i]/somme_elem_de_T_francais))*((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_francais[i]/somme_elem_de_T_francais));
+        resultat_francais += ((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_francais[i]/somme_elem_de_T_francais))*((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_francais[i]/somme_elem_de_T_francais));
     }
 
     //calcul de la différence euclidienne allemand
     for(int i=0; i<26;i++){
-        resultat_allemand = ((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_allemand[i]/somme_elem_de_T_allemand))*((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_allemand[i]/somme_elem_de_T_allemand));
+        resultat_allemand += ((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_allemand[i]/somme_elem_de_T_allemand))*((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_allemand[i]/somme_elem_de_T_allemand));
     }
 
     //calcul de la différence euclidienne espagnol
     for(int i=0; i<26;i++){
-        resultat_espagnol = ((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_espagnol[i]/somme_elem_de_T_espagnol))*((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_espagnol[i]/somme_elem_de_T_espagnol));
+        resultat_espagnol += ((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_espagnol[i]/somme_elem_de_T_espagnol))*((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_espagnol[i]/somme_elem_de_T_espagnol));
     }
 
     //calcul de la différence euclidienne italien
     for(int i=0; i<26;i++){
-        resultat_italien = ((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_italien[i]/somme_elem_de_T_italien))*((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_italien[i]/somme_elem_de_T_italien));
+        resultat_italien += ((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_italien[i]/somme_elem_de_T_italien))*((T_occurence[i]/somme_elem_de_T_ocurrence) - (T_italien[i]/somme_elem_de_T_italien));
     }
 
     //Racine final du calcul de l'écart
@@ -331,13 +335,14 @@ void Trouve_Langue(float *tableau_ecart,char * filename) {
     int taille=0;
     char Texte_Ecart[5][32] = {"Anglais ; écart : ","Français ; écart : ","Allemand ; écart : ","Espagnol ; écart : ","Italien ; écart : "};
 
+    //Récupère la plus petite valeur d'Ecart
     for(int i=0;i<5;i++){
         if(plus_petit_ecart>tableau_ecart[i]){
             plus_petit_ecart=tableau_ecart[i];
         }
     }
-    //cout<<"plus_petit_ecart = "<<plus_petit_ecart<<endl;
 
+//Affiche la langue qui correspond au texte
     for(int i=0;i<5;i++){
         if(plus_petit_ecart==tableau_ecart[i]){
             if(i==0){
@@ -419,15 +424,12 @@ int main() {
         cout<<"Tres bien!\n"<<endl;
         cout<<"\nSaisir le chemin d'acces de votre fichier texte (n'oubliez pas l'antislash de fin) : \n"<<endl;
         scanf("%s", cheminAcces);
-        cout<<cheminAcces<<endl;
 
         cout<<"\nSaisir le nom de votre fichier texte : \n"<<endl;
         scanf("%s", nomTxt);
-        cout<<nomTxt<<endl;
 
         cout<<"\nSaisir l'extension de votre fichier texte (n'oubliez pas le point au debut): \n"<<endl;
         scanf("%s", extTxt);
-        cout<<extTxt<<endl;
     }
 
 
