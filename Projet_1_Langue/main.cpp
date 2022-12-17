@@ -25,8 +25,6 @@ float * Occurrences_Lettres(char * filename, float *tab_occ) {
 
                 caract = fgetc(fic);
 
-                //////////////////////////////////////////////
-
                 if(!(caract >= 48 && caract <= 57)){
                     // Transforme les accents similaires a lettre "a" en "a"
                     if ((caract >= 131 && caract <= 134) || (caract >= 142 && caract <= 143) || caract==160 || (caract >= 181 && caract <= 183) || (caract >= 198 && caract <= 199) || (caract >= -125 && caract <= -122) || (caract >= -114 && caract <= -113) || caract==-96 || (caract >= -75 && caract <= -73) || (caract >= -58 && caract <= -57)){
@@ -70,10 +68,7 @@ float * Occurrences_Lettres(char * filename, float *tab_occ) {
                     caract = caract+32;
                 }
 
-                //////////////////////////////////////////////////
-
                 occ = static_cast<char>(caract);
-
                 if (occ == 'a') {
                     nbOccA = nbOccA + 1;
                 }
@@ -319,13 +314,7 @@ float* Calcul_ecart(float* T_occurence,float* tab_ecart) {
     ecart_allemand = sqrt(resultat_allemand);
     ecart_espagnol = sqrt(resultat_espagnol);
     ecart_italien = sqrt(resultat_italien);
-/*
-    cout<<"Ecart Anglais : "<<setprecision(2)<<ecart_anglais<<" (Le pourcentage de ressemblance est de "<<100-ecart_anglais<<"%)"<<endl;
-    cout<<"Ecart Francais : "<<setprecision(2)<<ecart_francais<<" (Le pourcentage de ressemblance est de "<<100-ecart_francais<<"%)"<<endl;
-    cout<<"Ecart Allemand : "<<setprecision(2)<<ecart_allemand<<" (Le pourcentage de ressemblance est de "<<100-ecart_allemand<<"%)"<<endl;
-    cout<<"Ecart Espagnol : "<<setprecision(2)<<ecart_espagnol<<" (Le pourcentage de ressemblance est de "<<100-ecart_espagnol<<"%)"<<endl;
-    cout<<"Ecart Italien : "<<setprecision(2)<<ecart_italien<<" (Le pourcentage de ressemblance est de "<<100-ecart_italien<<"%)"<<endl;
-*/
+
     tab_ecart[0]={ecart_anglais};
     tab_ecart[1]={ecart_francais};
     tab_ecart[2]={ecart_allemand};
@@ -425,9 +414,9 @@ int main() {
         scanf("%d", &choix);
     }
 
-    //Si l'on recherche les occurrences des lettres d'un texte
+    //Saisie du chemin d'acces au fichier
     if(choix==1 || choix==2) {
-        cout<<"Vous avez choisi les occurences des lettres!\n"<<endl;
+        cout<<"Tres bien!\n"<<endl;
         cout<<"\nSaisir le chemin d'acces de votre fichier texte (n'oubliez pas l'antislash de fin) : \n"<<endl;
         scanf("%s", cheminAcces);
         cout<<cheminAcces<<endl;
@@ -444,18 +433,23 @@ int main() {
 
     strcat(cheminAcces, nomTxt);
     strcat(cheminAcces, extTxt);
-    cout<<cheminAcces<<endl;
 
     float tab_occ[26];
     float tab_ecart[5];
 
+    //Cas si l'on recherche les occurrences des lettres du texte
     if(choix==1) {
+        cout<<Travail en cours. veuillez patientez...<<endl;
         float *tableau_occurrence = Occurrences_Lettres(cheminAcces, tab_occ);
+        cout<<Travail terminer !<<endl;
     }
+    //Cas si l'on recherche la langue du texte
     if(choix==2) {
+        cout<<Travail en cours. veuillez patientez...<<endl;
         float *tableau_occurrence = Occurrences_Lettres(cheminAcces, tab_occ);
         float *tableau_ecart = Calcul_ecart(tableau_occurrence,tab_ecart);
         Trouve_Langue(tableau_ecart,cheminAcces);
+        cout<<Travail terminer !<<endl;
     }
 
 
