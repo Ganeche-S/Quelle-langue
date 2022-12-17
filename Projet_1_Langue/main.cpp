@@ -439,17 +439,17 @@ int main() {
 
     //Cas si l'on recherche les occurrences des lettres du texte
     if(choix==1) {
-        cout<<Travail en cours. veuillez patientez...<<endl;
+        cout<<"Travail en cours. veuillez patientez..."<<endl;
         float *tableau_occurrence = Occurrences_Lettres(cheminAcces, tab_occ);
-        cout<<Travail terminer !<<endl;
+        cout<<"Travail terminer !"<<endl;
     }
     //Cas si l'on recherche la langue du texte
     if(choix==2) {
-        cout<<Travail en cours. veuillez patientez...<<endl;
+        cout<<"Travail en cours. veuillez patientez..."<<endl;
         float *tableau_occurrence = Occurrences_Lettres(cheminAcces, tab_occ);
         float *tableau_ecart = Calcul_ecart(tableau_occurrence,tab_ecart);
         Trouve_Langue(tableau_ecart,cheminAcces);
-        cout<<Travail terminer !<<endl;
+        cout<<"Travail terminer !"<<endl;
     }
 
 
